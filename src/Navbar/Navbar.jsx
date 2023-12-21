@@ -43,12 +43,12 @@ const Navbar = () => {
                 </div>
                 <div className="flex flex-col items-center">
                     <img className="w-[50px] mx-auto md:mx-0" src={logo} />
-                    <h2 className="header text-xl font-bold ">Pro Tasker</h2>
+                    <h2 className="header font-bold ">Pro Tasker</h2>
                 </div>
             </div>
 
             <div className="navbar-center hidden lg:flex">
-                <ul className="flex gap-8 font-semibold text-xl">
+                <ul className="flex gap-8 font-semibold text-lg">
                     {navLinks}
                 </ul>
             </div>
@@ -62,7 +62,7 @@ const Navbar = () => {
                                         <img className="w-[50px] h-[50px] mx-3 rounded-full" src={user.photoURL} /> :
                                         <img className="w-[50px] h-[50px] mx-3 rounded-full" src="https://i.ibb.co/VC1vhmp/user.png" />
                                 }
-                                <a onClick={handleLogOut} className="font-bold text-lg px-4 py-2 text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:from-blue-500 hover:to-purple-600 rounded-lg">Logout</a>
+                                <a onClick={handleLogOut} className="font-bold px-4 py-2 text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:from-blue-500 hover:to-purple-600 rounded-lg">Logout</a>
                             </div>
                        :
                         ""
