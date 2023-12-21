@@ -1,9 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root/Root";
 import Home from "../pages/Home/Home/Home";
-import Dashboard from "../pages/Dashboard/Dashboard";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import CreateTask from "../pages/Dashboard/CreateTask";
+import UpdateTask from "../pages/Dashboard/UpdateTask";
+import Dashboard from "../Layout/Dashboard/Dashboard";
+import ManageTask from "../pages/Dashboard/ManageTask";
 
   const router = createBrowserRouter([
     {
@@ -15,16 +18,30 @@ import Register from "../pages/Register/Register";
           element: <Home></Home>
         },
         {
-          path:"/dashboard",
-          element: <Dashboard></Dashboard>
-        },
-        {
           path:"/login",
           element: <Login></Login>
         },
         {
           path:"/register",
           element: <Register></Register>
+        }
+      ]
+    },
+    {
+      path:"dashboard",
+      element: <Dashboard></Dashboard>,
+      children:[
+        {
+          path:"createTask",
+          element: <CreateTask></CreateTask>
+        },
+        {
+          path:"updateTask",
+          element: <UpdateTask></UpdateTask>
+        },
+        {
+          path:"manageTask",
+          element: <ManageTask></ManageTask>
         }
       ]
     },
