@@ -5,7 +5,7 @@ import { useDrop } from "react-dnd";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import Swal from "sweetalert2";
 
-const Section = ({ status, tasks, setTasks }) => {
+const Section = ({ status, tasks, setData }) => {
     const axiosPrivate = useAxiosPrivate();
     const [todos, setTodos] = useState([]);
     const [ongoing, setOngoing] = useState([]);
@@ -47,7 +47,7 @@ const Section = ({ status, tasks, setTasks }) => {
     }
 
     const addItemToSection = (id) => {
-        setTasks((prev) => {
+        setData((prev) => {
             const modifyTasks = prev.map(task => {
                 if (task._id === id) {
                     const mTask = { ...task, status: status };
@@ -81,7 +81,7 @@ const Section = ({ status, tasks, setTasks }) => {
                         <Task key={task._id}
                             task={task}
                             tasks={tasks}
-                            setTasks={setTasks}
+                            setData={setData}
                         ></Task>)
                 }
             </div>

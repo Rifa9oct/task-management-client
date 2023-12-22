@@ -8,12 +8,14 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 const ManageTask = () => {
     const { user } = useContext(AuthContext);
     const axiosPrivate = useAxiosPrivate();
-    const [tasks, setTasks] = useState([]);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         axiosPrivate.get("/tasks")
-            .then(res => (setTasks(res.data)))
+            .then(res => (setData(res.data)))
     }, [axiosPrivate])
+
+    const tasks = data.filter( item => item.email === user.email);
 
     const statuses = ["todo", "ongoing", "completed"]
 
@@ -23,7 +25,7 @@ const ManageTask = () => {
             <DndProvider backend={HTML5Backend}>
                 <div className="flex gap-16 justify-center mt-20">
                     {
-                        statuses.map((status, index) => <Section key={index} status={status} tasks={tasks} setTasks={setTasks} ></Section>)
+                        statuses.map((status, index) => <Section key={index} status={status} tasks={tasks} setData={setData} ></Section>)
                     }
                 </div>
             </DndProvider>

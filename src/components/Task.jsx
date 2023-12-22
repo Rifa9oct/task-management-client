@@ -4,7 +4,7 @@ import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import Swal from "sweetalert2";
 import { useDrag } from "react-dnd";
 
-const Task = ({ task, tasks, setTasks }) => {
+const Task = ({ task, tasks, setData }) => {
     const [{ isDragging }, drag] = useDrag(() => ({
         type: "task",
         item: {id: task._id},
@@ -22,7 +22,7 @@ const Task = ({ task, tasks, setTasks }) => {
                     Swal.fire("Good job", "Delete successfully", "success");
                 }
                 const remaining = tasks.filter (item => item._id !== task._id)
-                setTasks(remaining);
+                setData(remaining);
             })
     }
 
