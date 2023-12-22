@@ -1,0 +1,12 @@
+.animate-up {
+    animation: slide-up 1s ease forwards;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  @keyframes slide-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

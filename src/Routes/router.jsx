@@ -8,6 +8,8 @@ import UpdateTask from "../pages/Dashboard/UpdateTask";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import ManageTask from "../pages/Dashboard/ManageTask";
 import PrivateRoute from "../Routes/PrivateRoute"
+import About from "../pages/AboutUs/About";
+import Contact from "../pages/Contact/Contact";
 
   const router = createBrowserRouter([
     {
@@ -17,6 +19,14 @@ import PrivateRoute from "../Routes/PrivateRoute"
         {
           path:"/",
           element: <Home></Home>
+        },
+        {
+          path:"/aboutus",
+          element: <About></About>
+        },
+        {
+          path:"/contact",
+          element: <Contact></Contact>
         },
         {
           path:"/login",

@@ -11,12 +11,16 @@ const Navbar = () => {
         <li> <NavLink to="/" className={({ isActive, isPending }) =>
             isActive ? "active rounded-lg  text-red-500" : isPending ? "pending" : ""}>Home</NavLink>
         </li>
+        <li> <NavLink to="/aboutus" className={({ isActive, isPending }) =>
+            isActive ? "active rounded-lg  text-red-500" : isPending ? "pending" : ""}>About Us</NavLink>
+        </li>
         <li> <NavLink to="dashboard/createTask" className={({ isActive, isPending }) =>
             isActive ? "active rounded-lg  text-red-500" : isPending ? "pending" : ""}>Dashboard</NavLink>
         </li>
+        <li> <NavLink to="/contact" className={({ isActive, isPending }) =>
+            isActive ? "active rounded-lg  text-red-500" : isPending ? "pending" : ""}>Contact Us</NavLink>
+        </li>
     </>
-
-
     const handleLogOut = () => {
         logOut()
             .then(() => {
