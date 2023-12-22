@@ -14,13 +14,14 @@ const CreateTask = () => {
     const onSubmit = data => {
         const taskInfo = {
             name: user.displayName,
+            email: user.email,
             title: data.title,
             description: data.description,
             priority: data.priority,
             duration: data.duration,
             status: "todo"
         }
-        console.log(taskInfo)
+        // console.log(taskInfo)
         axiosPrivate.post("/tasks", taskInfo)
             .then(res => {
                 if(res.data.insertedId){
@@ -32,7 +33,6 @@ const CreateTask = () => {
 
     return (
         <div className="flex flex-col justify-center items-center bg-yellow-50  min-h-screen">
-
             <h1 className="text-center text-4xl mb-8 font-bold bg-yellow-50">Create your <span className="text-yellow-700">daily task</span></h1>
             <div className="relative  bg-white w-[600px] pl-6 border shadow-lg rounded-tl-[50px] rounded-br-[50px]">
                 <div className="absolute -left-[235px] -top-[100px]"><img className="w-[300px]" src={todo} alt="" /></div>
