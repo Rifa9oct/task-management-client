@@ -71,7 +71,7 @@ const Dashboard = () => {
             <div className="flex-1">
                 <Outlet></Outlet>
             </div>
-            <button onClick={() => setSidebar(!sidebar)} className="btn lg:hidden block text-yellow-900 text-3xl btn-warning"><GrMenu /></button>
+            <button onClick={() => setSidebar(!sidebar)} className="btn lg:hidden block text-yellow-900 text-xl btn-warning"><GrMenu /></button>
         </div>
     );
 };

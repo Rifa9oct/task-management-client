@@ -6,7 +6,7 @@ import "./contact.css";
 const Contact = () => {
 
     return (
-        <div className="text-center mb-20 p-5 lg:p-0">
+        <div className="text-center mt-32 lg:mb-0 mb-10 p-5 lg:p-0">
             <h1 className="text-4xl mb-5 font-bold">OUR <span className="text-green-600">CONTACTS</span></h1>
             <p className="mt-2 text-xs">As an experienced Event Management company. we have all kind of Event <br /> equipment, logistics and resources available</p>
 
