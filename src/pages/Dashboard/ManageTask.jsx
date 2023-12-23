@@ -23,7 +23,7 @@ const ManageTask = () => {
         <div>
             <h1 className="text-center text-5xl mt-20 font-bold">Manage <span className="text-yellow-700">your task</span></h1>
             <DndProvider backend={HTML5Backend}>
-                <div className="flex gap-16 justify-center mt-20">
+                <div className="flex flex-col mt-10 lg:flex-row lg:gap-16 justify-center lg:mt-20">
                     {
                         statuses.map((status, index) => <Section key={index} status={status} tasks={tasks} setData={setData} ></Section>)
                     }
