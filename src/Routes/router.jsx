@@ -47,8 +47,9 @@ import Contact from "../pages/Contact/Contact";
           element: <CreateTask></CreateTask>
         },
         {
-          path:"updateTask",
-          element: <UpdateTask></UpdateTask>
+          path:"updateTask/:id",
+          element: <UpdateTask></UpdateTask>,
+          loader: ({params}) => fetch(`https://task-management-server-khaki.vercel.app/tasks/${params.id}`)
         },
         {
           path:"manageTask",

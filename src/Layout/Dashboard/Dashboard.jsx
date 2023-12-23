@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { FaHome, FaEdit } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { MdOutlineCreateNewFolder, MdOutlineManageHistory } from "react-icons/md";
@@ -27,11 +27,7 @@ const Dashboard = () => {
                                         <MdOutlineCreateNewFolder className="text-xl inline"></MdOutlineCreateNewFolder> Create Task
                                 </NavLink>
                                 </li>
-                                <li><NavLink to="/dashboard/updateTask" className={({ isActive, isPending }) =>
-                                    isActive ? "active rounded-lg py-2 pl-3 pr-[80px] bg-yellow-800 text-white" : isPending ? "pending" : ""}>
-                                        <FaEdit className="text-xl inline"></FaEdit> Update Task
-                                </NavLink>
-                                </li>
+                                
                                 <li><NavLink to="/dashboard/manageTask" className={({ isActive, isPending }) =>
                                     isActive ? "active rounded-lg py-2 pl-3 pr-[70px] bg-yellow-800 text-white" : isPending ? "pending" : ""}>
                                         <MdOutlineManageHistory className="text-xl inline"></MdOutlineManageHistory> Manage Task
