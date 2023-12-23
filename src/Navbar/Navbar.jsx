@@ -33,9 +33,8 @@ const Navbar = () => {
             .catch(error => console.error(error))
     }
 
-
     return (
-        <div className="navbar absolute top-0 z-10 p-5 max-w-[1420px] mx-auto">
+        <div className="navbar bg-blue-50 w-full lg:px-32">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,7 +51,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-center hidden lg:flex">
-                <ul className="flex gap-8 font-semibold text-lg">
+                <ul className="flex gap-8 font-semibold">
                     {navLinks}
                 </ul>
             </div>
